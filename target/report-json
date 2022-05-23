@@ -1,0 +1,756 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2022-05-22T23:03:15.743Z",
+        "line": 9,
+        "name": "Deve alugar um filme com sucesso",
+        "description": "",
+        "id": "alugar-filme;deve-alugar-um-filme-com-sucesso",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 15071100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "um filme",
+            "match": {
+              "location": "AlugarFilmeSteps.umFilme(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "estoque",
+                  "2"
+                ]
+              },
+              {
+                "cells": [
+                  "preco",
+                  "3"
+                ]
+              },
+              {
+                "cells": [
+                  "tipo",
+                  "comum"
+                ]
+              }
+            ],
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 3183600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "alugar",
+            "match": {
+              "location": "AlugarFilmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 5291700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "o preço do aluguel será R$ 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.oPreçoDoAluguelSeráR$(int)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 1554100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "a data de entrega será em 1 dia",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 26
+                }
+              ],
+              "location": "AlugarFilmeSteps.aDataDeEntregaSeráEmDias(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 951900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "o estoque do filme será de 1 unidade",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.oEstoqueDoFilmeSeráDeUnidade(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-05-22T23:03:15.882Z",
+        "line": 19,
+        "name": "Não deve alugar um filme sem estoque",
+        "description": "",
+        "id": "alugar-filme;não-deve-alugar-um-filme-sem-estoque",
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 48155696300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "um filme com estoque de 0 unidades",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 24
+                }
+              ],
+              "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 833600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "alugar",
+            "match": {
+              "location": "AlugarFilmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 628600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "não será possível por falta de estoque",
+            "match": {
+              "location": "AlugarFilmeSteps.nãoSeráPossívelPorFaltaDeEstoque()"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 663800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "o estoque do filme será de 0 unidade",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.oEstoqueDoFilmeSeráDeUnidade(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-05-22T23:04:04.045Z",
+        "line": 36,
+        "name": "Deve dar condições conforme tipo do aluguel",
+        "description": "",
+        "id": "alugar-filme;deve-dar-condições-conforme-tipo-do-aluguel;;2",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 10726792400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "um filme com estoque de 2 unidades",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 24
+                }
+              ],
+              "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2290554800,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "que o preço do aluguel seja R$ 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 31
+                }
+              ],
+              "location": "AlugarFilmeSteps.queOPreçoDoAluguelSejaR$(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 403900,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "que o tipo do aluguel seja extendido",
+            "match": {
+              "arguments": [
+                {
+                  "val": "extendido",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.queOTipoDoAluguelSejaTipo(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 402200,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "alugar",
+            "match": {
+              "location": "AlugarFilmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 313800,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "o preço do aluguel será R$ 8",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.oPreçoDoAluguelSeráR$(int)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 450700,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "a data de entrega será em 3 dias",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 26
+                }
+              ],
+              "location": "AlugarFilmeSteps.aDataDeEntregaSeráEmDias(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 309600,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "a pontuação recebida será de 2 pontos",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 29
+                }
+              ],
+              "location": "AlugarFilmeSteps.aPontuaçãoRecebidaSeráDePontos(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-05-22T23:04:17.074Z",
+        "line": 37,
+        "name": "Deve dar condições conforme tipo do aluguel",
+        "description": "",
+        "id": "alugar-filme;deve-dar-condições-conforme-tipo-do-aluguel;;3",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 1279820300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "um filme com estoque de 2 unidades",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 24
+                }
+              ],
+              "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1259433700,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "que o preço do aluguel seja R$ 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 31
+                }
+              ],
+              "location": "AlugarFilmeSteps.queOPreçoDoAluguelSejaR$(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 634200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "que o tipo do aluguel seja comum",
+            "match": {
+              "arguments": [
+                {
+                  "val": "comum",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.queOTipoDoAluguelSejaTipo(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 684500,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "alugar",
+            "match": {
+              "location": "AlugarFilmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 809100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "o preço do aluguel será R$ 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.oPreçoDoAluguelSeráR$(int)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 911200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "a data de entrega será em 1 dias",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 26
+                }
+              ],
+              "location": "AlugarFilmeSteps.aDataDeEntregaSeráEmDias(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 647200,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "a pontuação recebida será de 1 pontos",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 29
+                }
+              ],
+              "location": "AlugarFilmeSteps.aPontuaçãoRecebidaSeráDePontos(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-05-22T23:04:19.622Z",
+        "line": 38,
+        "name": "Deve dar condições conforme tipo do aluguel",
+        "description": "",
+        "id": "alugar-filme;deve-dar-condições-conforme-tipo-do-aluguel;;4",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 759431900,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "um filme com estoque de 2 unidades",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 24
+                }
+              ],
+              "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 595381000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "que o preço do aluguel seja R$ 10",
+            "match": {
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 31
+                }
+              ],
+              "location": "AlugarFilmeSteps.queOPreçoDoAluguelSejaR$(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 716100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "que o tipo do aluguel seja extendido",
+            "match": {
+              "arguments": [
+                {
+                  "val": "extendido",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.queOTipoDoAluguelSejaTipo(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 828800,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "alugar",
+            "match": {
+              "location": "AlugarFilmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 521600,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "o preço do aluguel será R$ 20",
+            "match": {
+              "arguments": [
+                {
+                  "val": "20",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.oPreçoDoAluguelSeráR$(int)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 874100,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "a data de entrega será em 3 dias",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 26
+                }
+              ],
+              "location": "AlugarFilmeSteps.aDataDeEntregaSeráEmDias(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 436400,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "a pontuação recebida será de 2 pontos",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 29
+                }
+              ],
+              "location": "AlugarFilmeSteps.aPontuaçãoRecebidaSeráDePontos(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-05-22T23:04:20.986Z",
+        "line": 39,
+        "name": "Deve dar condições conforme tipo do aluguel",
+        "description": "",
+        "id": "alugar-filme;deve-dar-condições-conforme-tipo-do-aluguel;;5",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 568062400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "um filme com estoque de 2 unidades",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 24
+                }
+              ],
+              "location": "AlugarFilmeSteps.umFilmeComEstoqueDeUnidades(int)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 623461300,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "que o preço do aluguel seja R$ 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 31
+                }
+              ],
+              "location": "AlugarFilmeSteps.queOPreçoDoAluguelSejaR$(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 559300,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "que o tipo do aluguel seja semanal",
+            "match": {
+              "arguments": [
+                {
+                  "val": "semanal",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.queOTipoDoAluguelSejaTipo(String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 644300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "alugar",
+            "match": {
+              "location": "AlugarFilmeSteps.alugar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 519000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "o preço do aluguel será R$ 15",
+            "match": {
+              "arguments": [
+                {
+                  "val": "15",
+                  "offset": 27
+                }
+              ],
+              "location": "AlugarFilmeSteps.oPreçoDoAluguelSeráR$(int)"
+            },
+            "keyword": "Então "
+          },
+          {
+            "result": {
+              "duration": 746500,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "a data de entrega será em 7 dias",
+            "match": {
+              "arguments": [
+                {
+                  "val": "7",
+                  "offset": 26
+                }
+              ],
+              "location": "AlugarFilmeSteps.aDataDeEntregaSeráEmDias(int)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 362500,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "a pontuação recebida será de 3 pontos",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 29
+                }
+              ],
+              "location": "AlugarFilmeSteps.aPontuaçãoRecebidaSeráDePontos(int)"
+            },
+            "keyword": "E "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@unitários"
+          }
+        ]
+      }
+    ],
+    "name": "Alugar filme",
+    "description": "\tComo um usuário\n\tEu quero cadastrar aluguéis de filmes\n\tPara controlar preços e datas de entrega",
+    "id": "alugar-filme",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/alugar_filme.feature",
+    "tags": [
+      {
+        "name": "@unitários",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
