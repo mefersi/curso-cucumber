@@ -31,5 +31,4 @@ public class AluguelService {
 		filme.setEstoque(filme.getEstoque() - 1);
 		return nota;
 	}
-
 }

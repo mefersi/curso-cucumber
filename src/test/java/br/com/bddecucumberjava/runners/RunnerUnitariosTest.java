@@ -17,6 +17,5 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		dryRun = false,
 		strict = false
 		)
-public class RunnerUnitariosTest {
-	
+public class RunnerUnitariosTest {	
 }

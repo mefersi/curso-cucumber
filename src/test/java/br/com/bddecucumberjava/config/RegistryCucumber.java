@@ -30,5 +30,4 @@ public class RegistryCucumber implements TypeRegistryConfigurer {
 			}
 		}));
 	}
-
 }
